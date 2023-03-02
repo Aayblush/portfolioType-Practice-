@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --background-color: #fff;
+    --text-color: #555;
+    --titile-color: #000;
+}
+
+
+
+
+.dark-theme{
+    --background-color: #000;
+    --text-color: #999;
+    --titile-color: #fff;
+}
+
+
+
+body{
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.8s, color 0.8s;
+
+}
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    /* border: 2px solid red; */
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /* border: 2px solid black; */
+
+}
+
+.logo img{
+    width: 80px;
+
+}
+
+nav ul{
+    width: 100%;
+    /* border: 2px solid red; */
+    text-align: right;
+    list-style: none;
+    margin-right: 50px;
+
+    
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 5px 15px;
+
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+
+.toogle-btn{
+    background: #4864ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.toogle-btn img{
+    width: 25px;
+    margin-left: 10px;
+}
+
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+
+}
+
+.content h1{
+    font-size: 60px;
+    font-family: serif;
+    color: var(--titile-color);
+    font-weight: 500;
+
+}
+
+.content h1 span{
+    font-family: serif;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.content a{
+    text-decoration: none;
+    cursor: pointer;
+    background: #4864ff;
+    color: #fff;
+    padding: 15px 70px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 30px;
+    
+
+}
+
+.image-box{
+    /* border: 2px solid red; */
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+}
+
+.image-box img{
+    width: 370px;
+    display: block;
+    height: 500px;
+
+}
+
+.pattern{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    transform: rotate(40deg);
+    z-index: -1;
+    border: 2px solid rebeccapurple;
+
+}
+
+.pattern img{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move 1s linear infinite alternate-reverse;
+
+
+}
+
+.pattern img:nth-child(1){
+    transform: rotate(-45deg) translate(-70px, -50px);
+    animation-delay: 0.5s;
+    
+}
+
+.pattern img:nth-child(2){
+    transform: rotate(65deg) translate(0px, -40px) scale(.8);
+    animation-delay: 1.5s;
+}
+
+@keyframes move{
+    100%{
+        margin-left: 40px;
+        margin-top: 20px;
+        opacity: 0.3;
+
+    }
+}
